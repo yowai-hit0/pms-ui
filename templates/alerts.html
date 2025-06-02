@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>System Alerts</h2>
 <div class="card">
     <div class="card-body">
+        <div class="d-flex justify-content-between mb-3">
+            <h5 class="card-title">System Alerts</h5>
+            <button class="btn btn-sm btn-primary" onclick="loadAlertsTable()">
+                <i class="bi bi-arrow-clockwise"></i> Refresh
+            </button>
+        </div>
         <div class="table-responsive">
             <table class="table table-striped" id="alerts-table">
                 <thead>
@@ -15,7 +20,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Filled by JavaScript -->
+                    <tr>
+                        <td colspan="4" class="text-center py-4">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

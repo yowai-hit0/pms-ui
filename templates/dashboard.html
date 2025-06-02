@@ -1,11 +1,57 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row">
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-indigo">
+            <div class="card-body">
+                <h5 class="card-title">Current Parked Vehicles</h5>
+                <h2 class="card-text" id="current-count">0</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-teal">
+            <div class="card-body">
+                <h5 class="card-title">Today's Revenue</h5>
+                <h2 class="card-text" id="today-revenue">0 RWF</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-rose">
+            <div class="card-body">
+                <h5 class="card-title">Recent Alerts</h5>
+                <h2 class="card-text" id="recent-alerts">0</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
     <div class="col-md-8">
-        <h2>Recent Activity</h2>
         <div class="card">
             <div class="card-body">
+                <h5 class="card-title">Weekly Revenue</h5>
+                <canvas id="revenueChart" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Today's Activity</h5>
+                <canvas id="activityChart" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Recent Activity</h5>
                 <div class="table-responsive">
                     <table class="table table-striped" id="activity-table">
                         <thead>
@@ -18,59 +64,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Filled by JavaScript -->
+                            <tr>
+                                <td colspan="5" class="text-center py-4">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row mb-4">
-    <div class="col-md-4">
-        <div class="card text-white bg-primary">
-            <div class="card-body">
-                <h5 class="card-title">Current Parked Vehicles</h5>
-                <h2 class="card-text" id="current-count">0</h2>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card text-white bg-success">
-            <div class="card-body">
-                <h5 class="card-title">Today's Revenue</h5>
-                <h2 class="card-text" id="today-revenue">0 RWF</h2>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card text-white bg-warning">
-            <div class="card-body">
-                <h5 class="card-title">Recent Alerts</h5>
-                <h2 class="card-text" id="recent-alerts">0</h2>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="row mb-4">
-            <div class="col-12">
-                <div class="card text-white bg-primary">
-                    <div class="card-body">
-                        <h5 class="card-title">Current Parked Vehicles</h5>
-                        <h2 class="card-text" id="current-count">0</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-12">
-                <div class="card text-white bg-success">
-                    <div class="card-body">
-                        <h5 class="card-title">Today's Revenue</h5>
-                        <h2 class="card-text" id="today-revenue">0 RWF</h2>
-                    </div>
                 </div>
             </div>
         </div>
