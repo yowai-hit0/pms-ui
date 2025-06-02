@@ -1,0 +1,27 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Highlight unpaid exits */
+.table-danger {
+    background-color: #f8d7da;
+}
+
+/* Alert styling */
+.table-warning {
+    background-color: #fff3cd;
+}
