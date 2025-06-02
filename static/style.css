@@ -1,27 +1,33 @@
-body {
-    background-color: #f8f9fa;
+/* Add these styles to your existing CSS */
+.alert-badge {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.4rem;
+    min-width: 1.2rem;
 }
 
-.card {
-    margin-bottom: 20px;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+.alert-row {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .table-responsive {
-    max-height: 500px;
+    max-height: 70vh;
     overflow-y: auto;
 }
 
-.navbar {
-    margin-bottom: 20px;
+.card {
+    transition: all 0.3s ease;
 }
 
-/* Highlight unpaid exits */
-.table-danger {
-    background-color: #f8d7da;
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-/* Alert styling */
-.table-warning {
-    background-color: #fff3cd;
+#logs-table tbody tr:hover,
+#alerts-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
